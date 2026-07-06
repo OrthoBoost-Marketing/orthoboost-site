@@ -594,11 +594,40 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
     <a href="/schedule" class="btn btn-cyan">Book a Strategy Call</a>
   </div>
 </header>
-<section class="hero-lite" style="padding:112px 0 128px"><div class="wrap">
-<p class="kick">404 — Page Not Found</p>
-<h1>This page ghosted you.<br>We'd never.</h1>
-<p class="sub">The page you're looking for moved, retired, or never existed. Our follow-up team responds in 20 minutes — our 404 page responds instantly with better options:</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
+<style>
+.e404{padding:64px 0 112px;text-align:center;overflow:hidden}
+.e404 .wrap{display:flex;flex-direction:column;align-items:center}
+.e404-num{display:inline-flex;gap:6px;position:relative;padding-bottom:20px;margin-bottom:16px}
+.e404-num span.dg{
+  font-family:var(--display);font-size:clamp(110px,25vw,230px);line-height:.9;
+  color:var(--navy);display:inline-block;transform-origin:bottom center;
+}
+.e404-num span.dg.mid{color:var(--cyan)}
+.e404-num .gum{position:absolute;left:5%;right:5%;bottom:0;height:9px;border-radius:6px;
+  background:linear-gradient(90deg,var(--mint),var(--cyan));opacity:.55}
+.e404 .kick{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-dark)}
+.e404 h1{font-family:var(--display);font-size:clamp(34px,5.6vw,58px);text-transform:uppercase;line-height:1.04;letter-spacing:-.01em;margin-top:14px;max-width:18ch}
+.e404 .sub{margin:22px auto 0;font-size:19px;color:var(--ink-60);max-width:54ch;line-height:1.55}
+.e404-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:36px}
+.e404-num .d1{--rot:-12deg;--ty:7px}
+.e404-num .d2{--rot:9deg;--ty:-5px}
+.e404-num .d3{--rot:-6deg;--ty:4px}
+@media (prefers-reduced-motion:no-preference){
+  .e404-num .d1{animation:straighten 1s cubic-bezier(.34,1.56,.64,1) .15s both}
+  .e404-num .d2{animation:straighten 1s cubic-bezier(.34,1.56,.64,1) .30s both}
+  .e404-num .d3{animation:straighten 1s cubic-bezier(.34,1.56,.64,1) .45s both}
+}
+@keyframes straighten{from{transform:rotate(var(--rot)) translateY(var(--ty))}to{transform:none}}
+</style>
+<section class="e404"><div class="wrap">
+<div class="e404-num" aria-hidden="true">
+  <span class="dg d1">4</span><span class="dg mid d2">0</span><span class="dg d3">4</span>
+  <span class="gum"></span>
+</div>
+<p class="kick">Error 404 · A Little Crooked</p>
+<h1>This page needs braces.</h1>
+<p class="sub">The link you followed is missing, moved, or never existed — crooked, honestly. Give us 20 minutes and we'd straighten it right out. In the meantime, here's the good stuff:</p>
+<div class="e404-cta">
 <a href="/" class="btn btn-navy">Back to Home</a>
 <a href="/guides" class="btn btn-ghost">Free Marketing Guides</a>
 <a href="/schedule" class="btn btn-cyan">Book a Strategy Call</a>
