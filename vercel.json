@@ -1,14 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex" }
-      ]
-    }
-  ],
   "redirects": [
     { "source": "/services/google-ads-for-orthodontists", "destination": "/google-ads-for-orthodontists", "permanent": true },
     { "source": "/services/social-media-ads-for-orthodontists", "destination": "/social-media-marketing-for-orthodontists", "permanent": true },
