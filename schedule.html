@@ -371,7 +371,7 @@ section{padding:128px 0}
 /* ---------- Guarantee ---------- */
 .guarantee{background:var(--mint);color:var(--navy);position:relative;overflow:hidden;padding:112px 0}
 .guarantee::before,.guarantee::after{
-  content:"90 DAYS";position:absolute;font-family:var(--display);
+  content:"";position:absolute;font-family:var(--display);
   font-size:clamp(96px,16vw,200px);line-height:1;color:rgba(20,47,86,.06);
   white-space:nowrap;pointer-events:none;letter-spacing:-.02em;
 }
@@ -618,16 +618,6 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
 </head>
 <body>
 
-<!-- ============ 1. ANNOUNCEMENT TICKER ============ -->
-<div class="announce" aria-label="Announcement">
-  <div class="lane" id="announceLane">
-    <span><i class="dot"></i> Free <b>$10,000 website</b> with every 3-month growth plan</span>
-    <span><i class="dot"></i> Free <b>$10,000 website</b> with every 3-month growth plan</span>
-    <span><i class="dot"></i> Free <b>$10,000 website</b> with every 3-month growth plan</span>
-    <span><i class="dot"></i> Free <b>$10,000 website</b> with every 3-month growth plan</span>
-  </div>
-</div>
-
 <!-- ============ 2. NAV ============ -->
 <header class="nav" id="siteNav">
   <div class="wrap nav-in">
@@ -719,10 +709,6 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
         <span class="chip">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           Run by an orthodontist — 13 years, built AZ's largest private practice
-        </span>
-        <span class="chip">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          90-day ROI guarantee
         </span>
         <span class="chip">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M2 9h20"/></svg>
@@ -882,7 +868,7 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
   /* Duplicate marquee lanes so the 50% translate loop is seamless */
   ['announceLane'].forEach(function(id){
     var lane = document.getElementById(id);
-    lane.innerHTML += lane.innerHTML;
+    if (lane) lane.innerHTML += lane.innerHTML;
   });
 
   /* Scroll reveal */
