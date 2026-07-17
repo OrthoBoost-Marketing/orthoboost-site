@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] }
+  ],
   "redirects": [
     { "source": "/services/google-ads-for-orthodontists", "destination": "/google-ads-for-orthodontists", "permanent": true },
     { "source": "/services/social-media-ads-for-orthodontists", "destination": "/social-media-marketing-for-orthodontists", "permanent": true },
