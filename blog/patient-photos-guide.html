@@ -135,6 +135,19 @@ header.nav{
   background:var(--cyan);border-radius:2px;transition:width .25s var(--ease);
 }
 .nav-links a:hover::after{width:100%}
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-drop-t{display:inline-flex;align-items:center;gap:6px}
+.nav-drop-t .caret{width:11px;height:11px;transition:transform .25s var(--ease)}
+.nav-links .nav-drop-menu{position:absolute;top:100%;left:-8px;min-width:190px;background:var(--white);border:1px solid var(--ink-16);border-radius:var(--r-md);box-shadow:var(--shadow);padding:8px;display:none;flex-direction:column;gap:2px;z-index:70}
+.nav-links .nav-drop:hover .nav-drop-menu{display:flex}
+.nav-links .nav-drop:hover .caret{transform:rotate(180deg)}
+.nav-links .nav-drop-menu a{padding:10px 12px;border-radius:8px;font-size:14px;font-weight:600;white-space:nowrap;color:var(--navy)}
+.nav-links .nav-drop-menu a::after{display:none}
+.nav-links .nav-drop-menu a:hover{background:var(--off);color:var(--cyan-dark)}
+.mobile-menu .nav-drop{display:block}
+.mobile-menu .nav-drop-menu{display:flex;flex-direction:column}
+.mobile-menu .nav-drop-menu a{padding-left:20px;font-size:15px;color:var(--ink-60)}
+.mobile-menu .nav-drop-t .caret{display:none}
 .nav .btn{padding:12px 24px;font-size:14px}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
 .burger span{display:block;width:26px;height:3px;background:var(--navy);margin:5px 0;border-radius:2px;transition:.3s var(--ease)}
@@ -563,10 +576,9 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
   <div class="wrap nav-in">
     <a href="/" class="wordmark" aria-label="OrthoBoost home"><img src="/assets/logo.svg" alt="OrthoBoost" class="logo-img"></a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="/services">Services</a>
+      <div class="nav-drop"><a href="/services" class="nav-drop-t">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a><div class="nav-drop-menu"><a href="/orthodontic-website-design">Websites</a><a href="/google-ads-for-orthodontists">Google Ads</a><a href="/social-media-marketing-for-orthodontists">Facebook Ads</a><a href="/services#ai-visibility">AI Search</a></div></div>
       <a href="#how">How It Works</a>
       <a href="/pricing">Pricing</a>
-      <a href="/our-work">Our Work</a>
       <a href="/about">About</a>
       <a href="/guides">Free Resources</a>
     </nav>
@@ -576,10 +588,9 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
     </button>
   </div>
   <div class="mobile-menu">
-    <a href="/services">Services</a>
+    <div class="nav-drop"><a href="/services" class="nav-drop-t">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a><div class="nav-drop-menu"><a href="/orthodontic-website-design">Websites</a><a href="/google-ads-for-orthodontists">Google Ads</a><a href="/social-media-marketing-for-orthodontists">Facebook Ads</a><a href="/services#ai-visibility">AI Search</a></div></div>
     <a href="#how">How It Works</a>
     <a href="/pricing">Pricing</a>
-    <a href="/our-work">Our Work</a>
     <a href="/about">About</a>
     <a href="/guides">Free Resources</a>
     <a href="/schedule" class="btn btn-cyan">Book a Strategy Call</a>
@@ -625,7 +636,6 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
         <a href="/services">Services</a>
         <a href="#how">How It Works</a>
         <a href="/pricing">Pricing</a>
-        <a href="/our-work">Our Work</a>
         <a href="/about">About</a>
       </div>
       <div class="f-col">
