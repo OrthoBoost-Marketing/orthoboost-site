@@ -551,7 +551,7 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
 }
 .tm-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
 .tm-photo{
-  position:relative;aspect-ratio:4/3;
+  position:relative;aspect-ratio:4/3.9; /* ~30% taller than 4/3 — shows shoulders, not cut at the neck */
   background:linear-gradient(150deg,var(--navy-700),var(--navy));
   display:grid;place-items:center;overflow:hidden;
 }
@@ -604,7 +604,7 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
   .about-hero{padding:64px 0 80px}
   .founder-about{padding:96px 0}
   .team-grid{grid-template-columns:1fr}
-  .tm-photo{aspect-ratio:16/10}
+  .tm-photo{aspect-ratio:4/3.9}
   .prin{grid-template-columns:1fr;gap:16px;padding:40px 0}
 }
 </style>
