@@ -59,10 +59,37 @@ h2.d{font-size:clamp(34px,5.4vw,var(--fs-5))}
 /* Nav */
 header.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink-16)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px}
+.wordmark{font-family:var(--display);font-size:26px;letter-spacing:-.01em;line-height:1}
 .logo-img{height:44px;width:auto;display:block}
 .logo-img-footer{height:56px}
-.nav .btn{padding:12px 24px;font-size:14px}
 @media (max-width:768px){.logo-img{height:36px}}
+.nav-links{display:flex;gap:32px;font-size:15px;font-weight:600}
+.nav-links a{position:relative;padding:8px 0;color:var(--navy)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--cyan);border-radius:2px;transition:width .25s var(--ease)}
+.nav-links a:hover::after{width:100%}
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-drop-t{display:inline-flex;align-items:center;gap:6px}
+.nav-drop-t .caret{width:11px;height:11px;transition:transform .25s var(--ease)}
+.nav-links .nav-drop-menu{position:absolute;top:100%;left:-8px;min-width:190px;background:var(--white);border:1px solid var(--ink-16);border-radius:var(--r-md);box-shadow:var(--shadow);padding:8px;display:none;flex-direction:column;gap:2px;z-index:70}
+.nav-links .nav-drop:hover .nav-drop-menu{display:flex}
+.nav-links .nav-drop:hover .caret{transform:rotate(180deg)}
+.nav-links .nav-drop-menu a{padding:10px 12px;border-radius:8px;font-size:14px;font-weight:600;white-space:nowrap;color:var(--navy)}
+.nav-links .nav-drop-menu a::after{display:none}
+.nav-links .nav-drop-menu a:hover{background:var(--off);color:var(--cyan-dark)}
+.mobile-menu .nav-drop{display:block}
+.mobile-menu .nav-drop-menu{display:flex;flex-direction:column}
+.mobile-menu .nav-drop-menu a{padding-left:20px;font-size:15px;color:var(--ink-60)}
+.mobile-menu .nav-drop-t .caret{display:none}
+.nav .btn{padding:12px 24px;font-size:14px}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:3px;background:var(--navy);margin:5px 0;border-radius:2px;transition:.3s var(--ease)}
+.mobile-menu{display:none;background:var(--white);border-bottom:1px solid var(--ink-16);padding:8px 24px 24px}
+.mobile-menu a{display:block;padding:14px 0;font-weight:700;font-size:var(--fs-1);border-bottom:1px solid var(--ink-16)}
+.mobile-menu .btn{margin-top:16px;width:100%}
+.mobile-open .mobile-menu{display:block}
+.mobile-open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.mobile-open .burger span:nth-child(2){opacity:0}
+.mobile-open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 
 /* Confirmation hero */
 .confirm-hero{position:relative;padding:80px 0 72px;overflow:hidden;text-align:center}
@@ -98,12 +125,13 @@ section{padding:96px 0}
 .final p{color:var(--w-70);max-width:44ch}
 
 /* Footer */
-footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16);padding:56px 0 36px}
-.f-in{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:center;margin-bottom:32px}
-.f-brand p{margin-top:16px;color:var(--w-70);font-size:15px;max-width:34ch}
-.f-contact a{display:block;font-size:15px;color:var(--w-70);font-weight:500;padding:3px 0}
-.f-contact a:hover{color:var(--cyan)}
-.f-bottom{border-top:1px solid var(--w-16);padding-top:24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13px;color:var(--w-70)}
+footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16);padding:80px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.4fr;gap:48px;margin-bottom:64px}
+.f-col h4{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:24px}
+.f-col a,.f-col p{display:block;font-size:15px;color:var(--w-70);padding:6px 0;font-weight:500}
+.f-col a:hover{color:var(--cyan)}
+.f-brand p{max-width:32ch;margin-top:24px;color:var(--w-70);font-size:15px}
+.f-bottom{border-top:1px solid var(--w-16);padding-top:32px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13px;color:var(--w-70)}
 .f-bottom a:hover{color:var(--cyan)}
 
 /* Reveal */
@@ -115,11 +143,14 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
 @media (max-width:1024px){
   .steps{grid-template-columns:1fr;gap:40px;max-width:420px}
   .steps::before{display:none}
+  .f-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:768px){
   section{padding:72px 0}
   .lead{font-size:var(--fs-1)}
-  .f-in{flex-direction:column;align-items:flex-start;gap:24px}
+  .nav-links,.nav .btn-desktop{display:none}
+  .burger{display:block}
+  .f-grid{grid-template-columns:1fr;gap:40px}
 }
 
 /* Cookie consent banner */
@@ -141,10 +172,28 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
 <body>
 
 <!-- Nav -->
-<header class="nav">
+<header class="nav" id="siteNav">
   <div class="wrap nav-in">
     <a href="/" class="wordmark" aria-label="OrthoBoost home"><img src="/assets/logo.svg" alt="OrthoBoost" class="logo-img"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <div class="nav-drop"><a href="/services" class="nav-drop-t">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a><div class="nav-drop-menu"><a href="/orthodontic-website-design">Websites</a><a href="/google-ads-for-orthodontists">Google Ads</a><a href="/social-media-marketing-for-orthodontists">Facebook Ads</a><a href="/services#ai-visibility">AI Search</a></div></div>
+      <a href="/#how">How It Works</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/about">About</a>
+      <a href="/guides">Free Resources</a>
+    </nav>
     <a href="/schedule" class="btn btn-cyan btn-desktop">Book a Strategy Call</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <div class="nav-drop"><a href="/services" class="nav-drop-t">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a><div class="nav-drop-menu"><a href="/orthodontic-website-design">Websites</a><a href="/google-ads-for-orthodontists">Google Ads</a><a href="/social-media-marketing-for-orthodontists">Facebook Ads</a><a href="/services#ai-visibility">AI Search</a></div></div>
+    <a href="/#how">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/guides">Free Resources</a>
+    <a href="/schedule" class="btn btn-cyan">Book a Strategy Call</a>
   </div>
 </header>
 
@@ -199,14 +248,40 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
 </section>
 
 <!-- Footer -->
-<footer>
+<footer class="on-dark">
   <div class="wrap">
-    <div class="f-in">
-      <div class="f-brand">
+    <div class="f-grid">
+      <div class="f-col f-brand">
         <a href="/" class="wordmark"><img src="/assets/logo-white.svg" alt="OrthoBoost" class="logo-img logo-img-footer"></a>
         <p>The full growth system for orthodontists — ads, websites, SEO, and AI search visibility under one roof.</p>
       </div>
-      <div class="f-contact">
+      <div class="f-col">
+        <h4>Company</h4>
+        <a href="/services">Services</a>
+        <a href="/#how">How It Works</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/about">About</a>
+      </div>
+      <div class="f-col">
+        <h4>Resources</h4>
+        <a href="/guides">Free Resources</a>
+        <a href="/guides">Guides</a>
+        <a href="/webinars">Webinars</a>
+        <a href="/blog">Blog</a>
+        <a href="/schedule">Book a Strategy Call</a>
+      </div>
+      <div class="f-col">
+        <h4>Expertise</h4>
+        <a href="/seo-for-orthodontists">SEO for Orthodontists</a>
+        <a href="/orthodontic-website-design">Orthodontic Website Design</a>
+        <a href="/google-ads-for-orthodontists">Google Ads for Orthodontists</a>
+        <a href="/social-media-marketing-for-orthodontists">Social Media Marketing</a>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <a href="/contact">Contact Us</a>
+        <p>1379 E Canyon Creek Dr<br>Gilbert, AZ 85295</p>
+        <a href="tel:+14809335656">(480) 933-5656</a>
         <a href="mailto:sales@startorthoboost.com">sales@startorthoboost.com</a>
       </div>
     </div>
@@ -254,6 +329,21 @@ D.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest(
 <script>
 (function(){
   "use strict";
+
+  /* Mobile menu */
+  var burger=document.getElementById('burger');
+  var nav=document.getElementById('siteNav');
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('mobile-open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.querySelectorAll('.mobile-menu a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('mobile-open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+
   var reveals=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.15,rootMargin:'0px 0px -48px 0px'});
