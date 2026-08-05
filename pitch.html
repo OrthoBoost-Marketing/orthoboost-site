@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The OrthoBoost Growth Plan — Presentation</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/assets/emblem.svg">
+<link rel="preload" href="/assets/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/archivo-black.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/inter-400.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/inter-600.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/inter-700.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/inter-800.woff2') format('woff2')}
+
+:root{
+  --navy:#142F56; --navy-800:#1B3A66; --navy-deep:#0D2140;
+  --blue:#2563EB; --cyan:#29BBF6; --mint:#7BEFDF; --cyan-dark:#0980BE;
+  --white:#fff; --off:#F3F7FA;
+  --ink-60:rgba(20,47,86,.64); --ink-16:rgba(20,47,86,.14);
+  --w-70:rgba(255,255,255,.72); --w-16:rgba(255,255,255,.16);
+  --display:'Archivo Black',system-ui,sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:var(--body);color:var(--navy);background:var(--navy-deep)}
+
+.deck{height:100vh;height:100dvh;overflow-y:auto;scroll-snap-type:y mandatory;scroll-behavior:smooth}
+.slide{min-height:100vh;min-height:100dvh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;position:relative;padding:72px 0}
+.slide .wrap{width:min(1120px,90vw);margin:0 auto}
+
+.s-navy{background:radial-gradient(1100px 620px at 80% -8%,rgba(41,187,246,.25),transparent 60%),radial-gradient(760px 520px at 6% 112%,rgba(123,239,223,.14),transparent 60%),var(--navy-deep);color:#fff}
+.s-white{background:var(--white)}
+.s-off{background:var(--off)}
+
+.kicker{font-weight:800;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-dark);margin-bottom:18px}
+.s-navy .kicker{color:var(--mint)}
+h1,h2{font-family:var(--display);line-height:1.08;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,6.4vw,4.6rem)}
+h2{font-size:clamp(1.9rem,4.6vw,3.3rem);color:var(--navy)}
+.s-navy h2{color:#fff}
+.hl{color:var(--cyan)}
+.hl-mint{color:var(--mint)}
+.lead{font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:1.6;margin-top:22px;max-width:780px;color:var(--ink-60)}
+.s-navy .lead{color:var(--w-70)}
+.lead b,.lead strong{color:inherit;font-weight:700}
+.s-navy .lead b{color:#fff}
+
+/* fixed chrome */
+.chrome-logo{position:fixed;top:22px;left:26px;z-index:40;height:26px;opacity:.92}
+.counter{position:fixed;left:26px;bottom:20px;z-index:40;font-size:.78rem;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.55);mix-blend-mode:difference}
+.dots{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px}
+.dots a{width:9px;height:9px;border-radius:50%;background:rgba(140,160,190,.45);display:block;transition:.2s}
+.dots a.on{background:var(--cyan);transform:scale(1.35)}
+.hint{position:fixed;right:26px;bottom:20px;z-index:40;font-size:.75rem;font-weight:600;color:rgba(140,160,190,.7)}
+@media(max-width:760px){.dots,.hint{display:none}}
+
+/* cover */
+.cover-logo{height:44px;margin-bottom:38px}
+.cover-meta{margin-top:56px;display:flex;gap:40px;flex-wrap:wrap;font-size:.95rem;color:var(--w-70)}
+.cover-meta b{display:block;color:#fff}
+
+/* problem slide */
+.relay{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.relay .box{border:1.5px solid var(--ink-16);border-radius:16px;padding:24px;background:var(--white)}
+.relay .box b{display:block;font-size:1.02rem;color:var(--navy);margin-bottom:6px}
+.relay .box span{font-size:.92rem;color:var(--ink-60);line-height:1.5}
+.relay .box em{display:block;font-style:normal;font-weight:800;color:#dc2626;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin-top:14px}
+@media(max-width:820px){.relay{grid-template-columns:1fr}}
+
+/* big number slide */
+.bignum{font-family:var(--display);font-size:clamp(4rem,13vw,9.5rem);color:var(--mint);line-height:1;margin:18px 0 8px}
+.subnum{font-size:clamp(1rem,1.8vw,1.25rem);color:var(--w-70);max-width:720px}
+.mathrow{margin-top:46px;display:flex;align-items:center;flex-wrap:wrap;gap:14px;font-family:var(--display);font-size:clamp(1.1rem,2.6vw,1.9rem);color:#fff}
+.mathrow .op{color:var(--cyan);font-size:.8em}
+.mathrow .eq{color:var(--mint)}
+.mathnote{margin-top:14px;font-size:.9rem;color:rgba(255,255,255,.5)}
+
+/* funnel slide */
+.funnel{display:flex;align-items:stretch;gap:0;margin-top:46px;flex-wrap:wrap}
+.fstep{flex:1;min-width:220px;background:var(--white);border:1.5px solid var(--ink-16);border-radius:16px;padding:24px;position:relative}
+.fstep b{display:block;font-family:var(--display);font-size:1.02rem;color:var(--navy);margin-bottom:8px}
+.fstep span{font-size:.92rem;color:var(--ink-60);line-height:1.5}
+.farrow{display:flex;align-items:center;padding:0 14px;font-family:var(--display);font-size:1.6rem;color:var(--cyan)}
+@media(max-width:900px){.funnel{flex-direction:column}.farrow{transform:rotate(90deg);justify-content:center;padding:4px 0}}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.pillar{background:var(--navy);color:#fff;border-radius:14px;padding:18px 20px;font-weight:800;font-size:.98rem;text-align:center}
+.pillar small{display:block;font-weight:600;color:var(--w-70);font-size:.78rem;margin-top:4px}
+@media(max-width:820px){.pillars{grid-template-columns:repeat(2,1fr)}}
+
+/* stack slide */
+.stack{margin-top:40px;border:1.5px solid var(--w-16);border-radius:18px;overflow:hidden}
+.stackrow{display:grid;grid-template-columns:1fr auto;gap:18px;padding:18px 26px;border-top:1px solid var(--w-16);align-items:center}
+.stackrow:first-child{border-top:none}
+.stackrow b{color:#fff;font-size:1.05rem}
+.stackrow span{display:block;color:var(--w-70);font-size:.88rem;margin-top:3px;max-width:640px}
+.stackrow .val{font-family:var(--display);color:var(--mint);font-size:1.05rem;white-space:nowrap}
+.stacktotal{background:rgba(41,187,246,.12);display:grid;grid-template-columns:1fr auto;padding:20px 26px;align-items:center}
+.stacktotal b{font-family:var(--display);color:#fff;font-size:1.15rem}
+.stacktotal .val{font-family:var(--display);color:var(--cyan);font-size:1.5rem}
+
+/* offer slide */
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:30px}
+@media(max-width:900px){.offer{grid-template-columns:1fr}}
+.pricecard{background:var(--white);border-radius:22px;padding:44px 40px;text-align:center;box-shadow:0 30px 80px rgba(13,33,64,.45)}
+.pricecard .free{font-family:var(--display);color:var(--cyan-dark);font-size:1.15rem;letter-spacing:.02em}
+.pricecard .strike{color:var(--ink-60);text-decoration:line-through;font-weight:700;font-size:1rem}
+.pricecard .price{font-family:var(--display);font-size:clamp(3.4rem,7vw,5rem);color:var(--navy);line-height:1;margin:14px 0 2px}
+.pricecard .per{color:var(--ink-60);font-weight:700}
+.pricecard .commit{margin-top:20px;background:var(--navy);color:#fff;border-radius:12px;padding:12px 16px;font-weight:800;font-size:.95rem}
+.pricecard .adnote{margin-top:14px;font-size:.82rem;color:var(--ink-60)}
+.offerlist{list-style:none;display:grid;gap:14px}
+.offerlist li{display:flex;gap:12px;align-items:flex-start;color:var(--w-70);font-size:1.02rem;line-height:1.5}
+.offerlist li b{color:#fff}
+.check{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--mint);color:var(--navy);font-weight:900;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:3px}
+
+/* roi slide */
+.roibar{margin-top:44px;display:grid;gap:16px}
+.roibar .row{display:grid;grid-template-columns:210px 1fr;gap:18px;align-items:center}
+.roibar .lab{font-weight:800;color:var(--navy);text-align:right;font-size:.95rem}
+.roibar .trough{height:34px;background:var(--ink-16);border-radius:10px;overflow:hidden}
+.roibar .fill{height:100%;border-radius:10px;display:flex;align-items:center;padding:0 14px;font-family:var(--display);font-size:.9rem;color:#fff;white-space:nowrap}
+.roibar .cost .fill{width:14%;background:var(--navy);min-width:130px}
+.roibar .ret .fill{width:100%;background:linear-gradient(90deg,var(--cyan),var(--mint));color:var(--navy)}
+@media(max-width:760px){.roibar .row{grid-template-columns:1fr}.roibar .lab{text-align:left}}
+
+/* authority slide */
+.cred{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.cred .c{border:1.5px solid var(--w-16);border-radius:16px;padding:26px}
+.cred .c .n{font-family:var(--display);font-size:2rem;color:var(--mint)}
+.cred .c span{display:block;color:var(--w-70);font-size:.92rem;margin-top:6px;line-height:1.5}
+@media(max-width:820px){.cred{grid-template-columns:1fr}}
+
+/* timeline slide */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.step{background:var(--white);border:1.5px solid var(--ink-16);border-radius:16px;padding:26px}
+.step .tag{font-family:var(--display);color:var(--cyan-dark);font-size:.85rem;letter-spacing:.08em}
+.step b{display:block;font-size:1.05rem;color:var(--navy);margin:10px 0 8px}
+.step span{font-size:.92rem;color:var(--ink-60);line-height:1.55}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* cta slide */
+.ctabig{text-align:center}
+.ctabig h2{font-size:clamp(2.2rem,5.6vw,4rem)}
+.ctaurl{display:inline-block;margin-top:36px;background:var(--cyan);color:var(--navy);font-family:var(--display);font-size:clamp(1.1rem,2.4vw,1.6rem);padding:18px 38px;border-radius:16px;text-decoration:none}
+.ctaurl:hover{background:var(--mint)}
+.ctaby{margin-top:30px;color:var(--w-70);font-weight:700}
+.ctaby span{color:var(--mint)}
+
+/* appendix slide */
+.appendix{max-width:760px}
+.appendix .kicker{color:var(--ink-60)}
+.appendix h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+.appx-card{margin-top:30px;border:1.5px solid var(--ink-16);border-radius:18px;padding:32px;background:var(--white)}
+.appx-price{display:flex;gap:36px;flex-wrap:wrap;margin:22px 0}
+.appx-price .p .n{font-family:var(--display);font-size:2rem;color:var(--navy)}
+.appx-price .p span{display:block;font-size:.85rem;color:var(--ink-60);font-weight:600;margin-top:2px}
+.appx-card p{color:var(--ink-60);font-size:.98rem;line-height:1.6}
+.appx-card p b{color:var(--navy)}
+
+@media print{
+  .deck{height:auto;overflow:visible;scroll-snap-type:none}
+  .slide{min-height:100vh;page-break-after:always}
+  .chrome-logo,.counter,.dots,.hint{display:none}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<img class="chrome-logo" src="/assets/logo-white.svg" alt="OrthoBoost">
+<div class="counter" id="counter">1 / 12</div>
+<nav class="dots" id="dots" aria-label="Slides"></nav>
+<div class="hint">→ / space to advance</div>
+
+<main class="deck" id="deck">
+
+  <!-- 1 · COVER -->
+  <section class="slide s-navy" id="s1">
+    <div class="wrap">
+      <img class="cover-logo" src="/assets/logo-white.svg" alt="OrthoBoost">
+      <div class="kicker">A Presentation for Growing Practices</div>
+      <h1>The Patient Growth System<br>for <span class="hl">Orthodontists.</span></h1>
+      <p class="lead">One team. One system. Website, SEO, Google Ads, and Meta ads — built to work together, because that's the only way they actually work.</p>
+      <div class="cover-meta">
+        <div><b>Presented by</b>Dr. Tyler Coles</div>
+        <div><b>Agency</b>OrthoBoost · startorthoboost.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · THE PROBLEM -->
+  <section class="slide s-white" id="s2">
+    <div class="wrap">
+      <div class="kicker">The Problem</div>
+      <h2>Your marketing is a relay race<br>between strangers.</h2>
+      <p class="lead">Most practices piece it together: a web company owns the site, an ad agency runs the ads, someone's nephew posts on social. Everyone does <b>their</b> job. Nobody owns <b>the result</b> — new patients in chairs.</p>
+      <div class="relay">
+        <div class="box"><b>The web company</b><span>Built your site years ago. Won't touch it without a change order. Has never seen your ad campaigns.</span><em>Owns the site, not the leads</em></div>
+        <div class="box"><b>The ad agency</b><span>Runs your ads — and sends every click to a homepage that wasn't built for that ad, that offer, or that patient.</span><em>Owns the clicks, not the conversions</em></div>
+        <div class="box"><b>You</b><span>Paying all of them, refereeing the finger-pointing, and still wondering why the phone isn't ringing more.</span><em>Owns the bill</em></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · WHAT ONE PATIENT IS WORTH -->
+  <section class="slide s-navy" id="s3">
+    <div class="wrap">
+      <div class="kicker">The Stakes</div>
+      <h2>First — what is one new patient actually worth?</h2>
+      <div class="bignum">$5,500</div>
+      <p class="subnum">A typical orthodontic case start. Your average may run higher — and that's before siblings, parents, and the referrals a great result sends your way.</p>
+      <div class="mathrow">
+        <span>5 extra starts&nbsp;/&nbsp;month</span><span class="op">×</span><span>$5,500</span><span class="op">×</span><span>12 months</span><span class="op">=</span><span class="eq">$330,000&nbsp;/&nbsp;year</span>
+      </div>
+      <div class="mathnote">This is why marketing that "kind of works" is the most expensive thing in your practice.</div>
+    </div>
+  </section>
+
+  <!-- 4 · THE FIX -->
+  <section class="slide s-white" id="s4">
+    <div class="wrap">
+      <div class="kicker">The Fix</div>
+      <h2>One team owns the whole funnel.<br>Start to finish.</h2>
+      <p class="lead">We don't run ads to your website. We build the website, write the pages, run the ads, and do the SEO — <b>as one system</b>. When the same team controls every step, every step can be optimized toward one number: booked consults.</p>
+      <div class="pillars">
+        <div class="pillar">Website<small>we build &amp; control it</small></div>
+        <div class="pillar">SEO<small>we write &amp; rank it</small></div>
+        <div class="pillar">Google Ads<small>we run &amp; tune them</small></div>
+        <div class="pillar">Meta Ads<small>we create &amp; test them</small></div>
+      </div>
+      <div class="funnel">
+        <div class="fstep"><b>A patient searches or scrolls</b><span>"Invisalign cost near me" on Google, or a mom sees your offer on Facebook.</span></div>
+        <div class="farrow">→</div>
+        <div class="fstep"><b>They land on a page built for that exact ad</b><span>Same message, same offer, one clear next step. Never a generic homepage.</span></div>
+        <div class="farrow">→</div>
+        <div class="fstep"><b>They book — and we can prove it</b><span>Every call and consult tracked back to the ad and page that produced it.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · EVERY AD ITS OWN PAGE -->
+  <section class="slide s-navy" id="s5">
+    <div class="wrap">
+      <div class="kicker">Where the Difference Is Made</div>
+      <h2>Every ad gets its own page.<br><span class="hl">Every. Single. One.</span></h2>
+      <p class="lead">This is the part almost nobody does — because it's only possible when one team controls both the ads <b>and</b> the website. A Google ad about Invisalign pricing goes to a page about Invisalign pricing. A Meta ad for your teen-braces offer goes to a page built around that offer. <b>Ad traffic never lands on a homepage.</b></p>
+      <p class="lead">Matching message, matching offer, one clear action — that's what turns the same ad budget into two or three times the consults. Your current setup can't do this. Ours is built for it.</p>
+    </div>
+  </section>
+
+  <!-- 6 · WHAT YOU GET -->
+  <section class="slide s-navy" id="s6">
+    <div class="wrap">
+      <div class="kicker">The Program</div>
+      <h2>Everything a growing practice needs. Nothing piecemeal.</h2>
+      <div class="stack">
+        <div class="stackrow"><div><b>Conversion-first practice website</b><span>Custom-built by us, for patients — not a template. Yours to keep.</span></div><div class="val">$2,500 value</div></div>
+        <div class="stackrow"><div><b>Local SEO engine</b><span>City pages, content, reviews strategy, listings — built to own your market on Google.</span></div><div class="val">$1,500+/mo typical</div></div>
+        <div class="stackrow"><div><b>Google Ads — fully managed</b><span>Campaigns for the searches that fill chairs, tuned weekly.</span></div><div class="val">$1,000+/mo typical</div></div>
+        <div class="stackrow"><div><b>Meta ads — fully managed</b><span>Facebook &amp; Instagram campaigns with creative that stops the scroll.</span></div><div class="val">$1,000+/mo typical</div></div>
+        <div class="stackrow"><div><b>Dedicated landing page for every campaign</b><span>The conversion multiplier nobody else includes.</span></div><div class="val">$500+ each typical</div></div>
+        <div class="stackrow"><div><b>Call &amp; consult tracking + plain-English reporting</b><span>You'll know exactly what's working, every month.</span></div><div class="val">included</div></div>
+        <div class="stacktotal"><b>Bought separately, at typical market rates</b><div class="val">$4,000–5,500/mo</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · THE OFFER -->
+  <section class="slide s-navy" id="s7">
+    <div class="wrap">
+      <div class="kicker">The Offer</div>
+      <h2>We build your website <span class="hl-mint">free.</span><br>You commit to three months.</h2>
+      <div class="offer">
+        <div class="pricecard">
+          <div class="free">FREE CUSTOM WEBSITE</div>
+          <div class="strike">normally $2,500</div>
+          <div class="price">$2,500</div>
+          <div class="per">per month · everything managed</div>
+          <div class="commit">3-month commitment — that's the whole ask</div>
+          <div class="adnote">Ad spend paid directly to Google &amp; Meta — every media dollar is yours, in your accounts.</div>
+        </div>
+        <ul class="offerlist">
+          <li><span class="check">✓</span><div><b>Why free?</b> Because the website only produces when it's wired into the ads and SEO — so we build it as part of the system, not as a product.</div></li>
+          <li><span class="check">✓</span><div><b>Why three months?</b> That's how long it takes to launch, learn, and prove it with your own numbers. After that, you stay because it's working — not because a contract says so.</div></li>
+          <li><span class="check">✓</span><div><b>Why all four channels?</b> Because we don't piecemeal — controlling the site, the SEO, and the ads together is the entire reason the system converts.</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · THE MATH -->
+  <section class="slide s-white" id="s8">
+    <div class="wrap">
+      <div class="kicker">The Math</div>
+      <h2>Two new starts and you're ahead.</h2>
+      <p class="lead">Three months of the program is <b>$7,500</b>. At a $5,500 average case, roughly <b>a start and a half covers the entire commitment</b> — everything past that is growth. We're not asking you to bet the practice. We're asking for two patients' worth of confidence.</p>
+      <div class="roibar">
+        <div class="row cost"><div class="lab">3-month program</div><div class="trough"><div class="fill">$7,500</div></div></div>
+        <div class="row ret"><div class="lab">5 starts/mo, annualized</div><div class="trough"><div class="fill">$330,000</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · AUTHORITY -->
+  <section class="slide s-navy" id="s9">
+    <div class="wrap">
+      <div class="kicker">Why Listen to Me</div>
+      <h2>Built by someone who's sat in your chair.</h2>
+      <p class="lead">I'm Dr. Tyler Coles. I've spent close to <b>15 years</b> doing marketing for orthodontists — starting with my own practice, where every wasted dollar came out of my pocket. What's in this system is what survived: the things that actually put patients in chairs, refined across hundreds of doctors' campaigns.</p>
+      <div class="cred">
+        <div class="c"><div class="n">~15 yrs</div><span>Marketing orthodontic practices — websites, SEO, and paid ads</span></div>
+        <div class="c"><div class="n">1st</div><span>Client was my own practice. I've paid for these lessons personally</span></div>
+        <div class="c"><div class="n">100s</div><span>Of doctors' campaigns behind the playbook we'll run for you</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · WHAT HAPPENS NEXT -->
+  <section class="slide s-white" id="s10">
+    <div class="wrap">
+      <div class="kicker">What Happens Next</div>
+      <h2>Launched and live in weeks — not quarters.</h2>
+      <div class="steps">
+        <div class="step"><div class="tag">WEEKS 1–2</div><b>Build</b><span>Your new website designed and built, tracking installed, campaigns and landing pages drafted while the site takes shape.</span></div>
+        <div class="step"><div class="tag">WEEKS 2–3</div><b>Launch</b><span>Site goes live. Google and Meta campaigns switch on — each one pointed at its own dedicated page from day one.</span></div>
+        <div class="step"><div class="tag">MONTHS 1–3</div><b>Grow</b><span>Weekly tuning, monthly plain-English reports, and the compounding effect of ads, SEO, and site working as one.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · CTA -->
+  <section class="slide s-navy" id="s11">
+    <div class="wrap ctabig">
+      <div class="kicker">The Next Step</div>
+      <h2>Let's put your growth<br>on one team's shoulders.</h2>
+      <a class="ctaurl" href="https://startorthoboost.com/schedule">startorthoboost.com/schedule</a>
+      <div class="ctaby">Dr. Tyler Coles · <span>OrthoBoost</span></div>
+    </div>
+  </section>
+
+  <!-- 12 · APPENDIX (quiet, only shown when relevant) -->
+  <section class="slide s-off" id="s12">
+    <div class="wrap appendix">
+      <div class="kicker">Appendix — Optional Add-On</div>
+      <h2>Follow-Up &amp; Scheduling Service</h2>
+      <div class="appx-card">
+        <p><b>Our team calls, confirms, and schedules patients for your practice.</b> Every lead followed up fast, every no-show chased, every consult confirmed — without adding load to your front desk.</p>
+        <div class="appx-price">
+          <div class="p"><div class="n">$500/mo</div><span>flat rate</span></div>
+          <div class="p"><div class="n">+ $35</div><span>per scheduled appointment</span></div>
+        </div>
+        <p>A premium service priced on volume — you pay for appointments actually set. Built for practices whose front desk is at capacity, or who don't want speed-to-lead depending on a busy phone. <b>Not required, and not part of the core program.</b></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  const deck = document.getElementById('deck');
+  const slides = [...document.querySelectorAll('.slide')];
+  const dots = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  slides.forEach((s,i)=>{
+    const a = document.createElement('a');
+    a.href = '#'+s.id; a.setAttribute('aria-label','Slide '+(i+1));
+    a.addEventListener('click', e=>{e.preventDefault(); go(i);});
+    dots.appendChild(a);
+  });
+  const dotEls = [...dots.children];
+  let cur = 0;
+  function go(i){
+    i = Math.max(0, Math.min(slides.length-1, i));
+    slides[i].scrollIntoView({behavior:'smooth'});
+  }
+  function setCur(i){
+    cur = i;
+    counter.textContent = (i+1)+' / '+slides.length;
+    dotEls.forEach((d,j)=>d.classList.toggle('on', j===i));
+  }
+  const obs = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting) setCur(slides.indexOf(e.target)); });
+  }, {root:deck, threshold:.6});
+  slides.forEach(s=>obs.observe(s));
+  addEventListener('keydown', e=>{
+    if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){ e.preventDefault(); go(cur+1); }
+    if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){ e.preventDefault(); go(cur-1); }
+    if(e.key==='Home'){ e.preventDefault(); go(0); }
+    if(e.key==='End'){ e.preventDefault(); go(slides.length-1); }
+  });
+  setCur(0);
+})();
+</script>
+</body>
+</html>
