@@ -140,6 +140,8 @@ header.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);bac
 .f-field input:focus,.f-field textarea:focus{outline:none;border-color:var(--cyan);background:var(--white)}
 .f-field textarea{resize:vertical;min-height:120px}
 .f-field input.err,.f-field textarea.err{border-color:#D64545}
+.f-hint{display:none;font-size:13px;font-weight:600;color:#8C2B2B}
+.f-field input.err~.f-hint{display:block}
 .consents{display:flex;flex-direction:column;gap:14px;margin:4px 0 20px;padding:18px;background:var(--off);border:1px solid var(--ink-16);border-radius:var(--r-md)}
 .consent{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
 .consent input{flex:none;width:18px;height:18px;margin-top:3px;accent-color:var(--cyan-dark);cursor:pointer}
@@ -276,7 +278,8 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
               </div>
               <div class="f-field">
                 <label for="cf-phone">Phone <span class="req">*</span></label>
-                <input type="tel" id="cf-phone" name="phone" autocomplete="tel" required>
+                <input type="tel" id="cf-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="(480) 555-1234" maxlength="16" required>
+                <span class="f-hint" id="cf-phone-hint">Please enter a valid 10-digit phone number.</span>
               </div>
             </div>
             <div class="f-field">
@@ -440,6 +443,25 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
   var btn = document.getElementById('cf-submit');
   var errBox = document.getElementById('cf-error');
 
+  /* Phone: format as (XXX) XXX-XXXX while typing; validate as NANP */
+  var phoneEl = document.getElementById('cf-phone');
+  function phoneDigits(v){
+    var d = v.replace(/\D/g, '');
+    if (d.length === 11 && d.charAt(0) === '1') d = d.slice(1);
+    return d.slice(0, 10);
+  }
+  function validPhone(v){
+    return /^[2-9]\d{2}[2-9]\d{6}$/.test(phoneDigits(v));
+  }
+  phoneEl.addEventListener('input', function(){
+    var d = phoneDigits(phoneEl.value);
+    var out = d;
+    if (d.length > 6) out = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
+    else if (d.length > 3) out = '(' + d.slice(0,3) + ') ' + d.slice(3);
+    phoneEl.value = out;
+    if (validPhone(out)) phoneEl.classList.remove('err');
+  });
+
   function val(name){
     var el = form.querySelector('[name="' + name + '"]');
     return el ? el.value.trim() : "";
@@ -455,7 +477,7 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
     /* Validation */
     var ok = true;
     [['full_name', function(v){ return v.length > 1; }],
-     ['phone', function(v){ return v.replace(/\D/g,'').length >= 10; }],
+     ['phone', validPhone],
      ['email', function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }],
      ['website', function(v){ return /.+\..+/.test(v); }],
      ['message', function(v){ return v.length > 1; }]
