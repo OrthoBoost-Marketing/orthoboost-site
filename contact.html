@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Consent Mode v2 defaults (must load before any tags) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});</script>
+<!-- End Consent Mode defaults -->
+<title>Contact Us — OrthoBoost</title>
+<link rel="canonical" href="https://startorthoboost.com/contact">
+<link rel="icon" type="image/svg+xml" href="/assets/emblem.svg">
+<meta name="description" content="Get in touch with the OrthoBoost team — ads, websites, SEO, and AI search visibility for orthodontists.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preload" href="/assets/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Archivo Black';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/archivo-black.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/inter-400.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/inter-500.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/inter-600.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/inter-700.woff2') format('woff2')}@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/inter-800.woff2') format('woff2')}
+/* ============================================================
+   DIRECTION B — BOLD & ENERGETIC · Contact
+   ============================================================ */
+:root{
+  --navy:#142F56;
+  --navy-800:#1B3A66;
+  --navy-700:#22477D;
+  --blue:#2563EB;
+  --cyan:#29BBF6;
+  --mint:#7BEFDF;
+  --cyan-dark:#0980BE;
+  --white:#FFFFFF;
+  --off:#F3F7FA;
+  --ink-60:rgba(20,47,86,.64);
+  --ink-16:rgba(20,47,86,.14);
+  --w-70:rgba(255,255,255,.72);
+  --w-16:rgba(255,255,255,.16);
+  --fs-0:16px; --fs-1:18px; --fs-2:24px; --fs-3:32px; --fs-4:42px; --fs-5:56px; --fs-6:75px; --fs-7:100px;
+  --display:'Archivo Black',system-ui,sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+  --wrap:1200px; --r-lg:24px; --r-md:16px; --r-sm:8px;
+  --shadow:0 24px 64px -24px rgba(20,47,86,.24);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:var(--fs-1);line-height:1.55;color:var(--navy);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.d{font-family:var(--display);font-weight:400;line-height:1.02;letter-spacing:-.015em;text-transform:uppercase}
+h1.d{font-size:clamp(46px,8.2vw,var(--fs-7))}
+h2.d{font-size:clamp(34px,5.4vw,var(--fs-5))}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-dark)}
+.kicker::before{content:"";width:32px;height:3px;background:var(--cyan);border-radius:2px}
+.lead{font-size:var(--fs-2);line-height:1.45;color:var(--ink-60);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:800;font-size:var(--fs-0);padding:16px 32px;border-radius:999px;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s}
+.btn svg{transition:transform .25s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-cyan{background:var(--cyan);color:var(--navy)}
+.btn-cyan:hover{transform:translateY(-3px);box-shadow:0 16px 40px -12px rgba(41,187,246,.55)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{transform:translateY(-3px);box-shadow:0 16px 40px -12px rgba(20,47,86,.45)}
+.btn-ghost{border-color:var(--ink-16);color:var(--navy);background:transparent}
+.btn-ghost:hover{border-color:var(--navy);transform:translateY(-3px)}
+
+/* ---------- Nav ---------- */
+header.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--ink-16)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px}
+.wordmark{font-family:var(--display);font-size:26px;letter-spacing:-.01em;line-height:1}
+.logo-img{height:44px;width:auto;display:block}
+.logo-img-footer{height:56px}
+@media (max-width:768px){.logo-img{height:36px}}
+.nav-links{display:flex;gap:32px;font-size:15px;font-weight:600}
+.nav-links a{position:relative;padding:8px 0;color:var(--navy)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--cyan);border-radius:2px;transition:width .25s var(--ease)}
+.nav-links a:hover::after{width:100%}
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-drop-t{display:inline-flex;align-items:center;gap:6px}
+.nav-drop-t .caret{width:11px;height:11px;transition:transform .25s var(--ease)}
+.nav-links .nav-drop-menu{position:absolute;top:100%;left:-8px;min-width:190px;background:var(--white);border:1px solid var(--ink-16);border-radius:var(--r-md);box-shadow:var(--shadow);padding:8px;display:none;flex-direction:column;gap:2px;z-index:70}
+.nav-links .nav-drop:hover .nav-drop-menu{display:flex}
+.nav-links .nav-drop:hover .caret{transform:rotate(180deg)}
+.nav-links .nav-drop-menu a{padding:10px 12px;border-radius:8px;font-size:14px;font-weight:600;white-space:nowrap;color:var(--navy)}
+.nav-links .nav-drop-menu a::after{display:none}
+.nav-links .nav-drop-menu a:hover{background:var(--off);color:var(--cyan-dark)}
+.mobile-menu .nav-drop{display:block}
+.mobile-menu .nav-drop-menu{display:flex;flex-direction:column}
+.mobile-menu .nav-drop-menu a{padding-left:20px;font-size:15px;color:var(--ink-60)}
+.mobile-menu .nav-drop-t .caret{display:none}
+.nav .btn{padding:12px 24px;font-size:14px}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:3px;background:var(--navy);margin:5px 0;border-radius:2px;transition:.3s var(--ease)}
+.mobile-menu{display:none;background:var(--white);border-bottom:1px solid var(--ink-16);padding:8px 24px 24px}
+.mobile-menu a{display:block;padding:14px 0;font-weight:700;font-size:var(--fs-1);border-bottom:1px solid var(--ink-16)}
+.mobile-menu .btn{margin-top:16px;width:100%}
+.mobile-open .mobile-menu{display:block}
+.mobile-open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.mobile-open .burger span:nth-child(2){opacity:0}
+.mobile-open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* ---------- Compact hero ---------- */
+.contact-hero{position:relative;padding:80px 0 40px;overflow:hidden}
+.hero-grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--ink-16) 1px,transparent 1px),linear-gradient(90deg,var(--ink-16) 1px,transparent 1px);background-size:96px 96px;opacity:.35;mask-image:radial-gradient(120% 90% at 20% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(120% 90% at 20% 0%,#000 30%,transparent 75%)}
+.contact-hero .wrap{position:relative;display:flex;flex-direction:column;gap:24px}
+.contact-hero h1.d{font-size:clamp(40px,6.6vw,var(--fs-6));max-width:16ch}
+.contact-hero h1 .accent{color:var(--cyan);position:relative;display:inline-block}
+.contact-hero h1 .accent svg{position:absolute;left:0;bottom:-10px;width:100%;height:16px}
+.contact-hero .lead{max-width:52ch}
+
+/* ---------- Contact layout ---------- */
+.contact-body{padding:56px 0 112px;background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.pitch{display:flex;flex-direction:column;gap:36px}
+.pitch h2{font-family:var(--display);font-size:var(--fs-3);text-transform:uppercase;letter-spacing:-.01em;line-height:1.1}
+.pitch>p{color:var(--ink-60);font-weight:500;max-width:46ch}
+.c-info{display:flex;flex-direction:column;gap:18px}
+.c-info li{display:flex;gap:16px;align-items:flex-start;font-weight:600;font-size:var(--fs-0)}
+.c-info li .ic{flex:none;width:44px;height:44px;border-radius:var(--r-sm);background:var(--navy);display:grid;place-items:center}
+.c-info li .ic svg{width:20px;height:20px;stroke:var(--cyan);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.c-info li small{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-60);margin-bottom:2px}
+.c-info li a:hover{color:var(--cyan-dark)}
+.host-card{display:flex;gap:20px;align-items:center;background:var(--navy);color:var(--white);border-radius:var(--r-lg);padding:24px;position:relative;overflow:hidden}
+.host-card::after{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(41,187,246,.25),transparent 70%);pointer-events:none}
+.host-card img{width:96px;height:112px;border-radius:var(--r-md);object-fit:cover;object-position:center top;flex:none;border:2px solid rgba(41,187,246,.5)}
+.host-card .h-kick{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+.host-card .h-name{font-family:var(--display);font-size:var(--fs-1);text-transform:uppercase;line-height:1.1}
+.host-card p{font-size:14px;color:var(--w-70);margin-top:8px;line-height:1.5}
+
+/* ---------- Form card ---------- */
+.form-card{background:var(--white);border:1px solid var(--ink-16);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+.form-card-head{background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 28px}
+.form-card-head .t{font-family:var(--display);font-size:var(--fs-1);text-transform:uppercase;letter-spacing:.01em}
+.form-card-head .rep{display:inline-flex;align-items:center;gap:8px;flex:none;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+.form-card-body{padding:32px 28px 28px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.f-field{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.f-field label{font-size:14px;font-weight:700;color:var(--navy)}
+.f-field label .req{color:var(--cyan-dark)}
+.f-field input,.f-field textarea{font-family:var(--body);font-size:var(--fs-0);color:var(--navy);background:var(--off);border:1.5px solid var(--ink-16);border-radius:var(--r-sm);padding:14px 16px;width:100%;transition:border-color .2s,background .2s}
+.f-field input:focus,.f-field textarea:focus{outline:none;border-color:var(--cyan);background:var(--white)}
+.f-field textarea{resize:vertical;min-height:120px}
+.f-field input.err,.f-field textarea.err{border-color:#D64545}
+.consents{display:flex;flex-direction:column;gap:14px;margin:4px 0 20px;padding:18px;background:var(--off);border:1px solid var(--ink-16);border-radius:var(--r-md)}
+.consent{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+.consent input{flex:none;width:18px;height:18px;margin-top:3px;accent-color:var(--cyan-dark);cursor:pointer}
+.consent span{font-size:13px;line-height:1.5;color:var(--ink-60);font-weight:500}
+.form-legal{font-size:13px;color:var(--ink-60);font-weight:500;margin-bottom:20px}
+.form-legal a{color:var(--cyan-dark);font-weight:700;text-decoration:underline}
+.form-card button[type=submit]{width:100%}
+.form-card button[type=submit][disabled]{opacity:.6;cursor:wait;transform:none}
+.form-msg{display:none;margin-top:16px;padding:14px 18px;border-radius:var(--r-sm);font-size:15px;font-weight:600}
+.form-msg.show{display:block}
+.form-msg.error{background:#FCEBEB;border:1px solid #E8A1A1;color:#8C2B2B}
+.hp-wrap{position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16);padding:80px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.4fr;gap:48px;margin-bottom:64px}
+.f-col h4{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:24px}
+.f-col a,.f-col p{display:block;font-size:15px;color:var(--w-70);padding:6px 0;font-weight:500}
+.f-col a:hover{color:var(--cyan)}
+.f-brand p{max-width:32ch;margin-top:24px;color:var(--w-70);font-size:15px}
+.f-bottom{border-top:1px solid var(--w-16);padding-top:32px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:13px;color:var(--w-70)}
+.f-bottom a:hover{color:var(--cyan)}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}.rv{opacity:1;transform:none}}
+
+@media (max-width:1024px){
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .contact-grid .form-col{order:-1}
+  .contact-body{padding-top:40px}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .contact-hero{padding:56px 0 24px}
+  .nav-links,.nav .btn-desktop{display:none}
+  .burger{display:block}
+  .f-grid{grid-template-columns:1fr;gap:40px}
+  .f-row{grid-template-columns:1fr}
+  .form-card-body{padding:24px 20px 20px}
+  .lead{font-size:var(--fs-1)}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="siteNav">
+  <div class="wrap nav-in">
+    <a href="/" class="wordmark" aria-label="OrthoBoost home"><img src="/assets/logo.svg" alt="OrthoBoost" class="logo-img"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <div class="nav-drop"><a href="/services" class="nav-drop-t">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a><div class="nav-drop-menu"><a href="/orthodontic-website-design">Websites</a><a href="/google-ads-for-orthodontists">Google Ads</a><a href="/social-media-marketing-for-orthodontists">Facebook Ads</a><a href="/services#ai-visibility">AI Search</a></div></div>
+      <a href="/#how">How It Works</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/about">About</a>
+      <a href="/guides">Free Resources</a>
+    </nav>
+    <a href="/schedule" class="btn btn-cyan btn-desktop">Book a Strategy Call</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <div class="nav-drop"><a href="/services" class="nav-drop-t">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a><div class="nav-drop-menu"><a href="/orthodontic-website-design">Websites</a><a href="/google-ads-for-orthodontists">Google Ads</a><a href="/social-media-marketing-for-orthodontists">Facebook Ads</a><a href="/services#ai-visibility">AI Search</a></div></div>
+    <a href="/#how">How It Works</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/about">About</a>
+    <a href="/guides">Free Resources</a>
+    <a href="/schedule" class="btn btn-cyan">Book a Strategy Call</a>
+  </div>
+</header>
+
+<!-- ============ COMPACT HERO ============ -->
+<section class="contact-hero">
+  <div class="hero-grid-bg"></div>
+  <div class="wrap">
+    <span class="kicker rv in">Contact Us</span>
+    <h1 class="d rv in">
+      Let's talk about<br>
+      <span class="accent">your practice.
+        <svg viewBox="0 0 400 16" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12 C 100 2, 300 2, 396 10" stroke="#142F56" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+      </span>
+    </h1>
+    <p class="lead rv in rv-d1">
+      Question about our services, pricing, or whether we're a fit? Send us a note and a
+      real member of our team will get back to you within one business day.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CONTACT: INFO + FORM ============ -->
+<section class="contact-body">
+  <div class="wrap contact-grid">
+
+    <!-- Left: contact info -->
+    <div class="pitch rv">
+      <h2>Reach us directly</h2>
+      <p>Prefer to skip the form? Email us, or <a href="/schedule" style="color:var(--cyan-dark);font-weight:700;text-decoration:underline">book a strategy call</a> straight onto the calendar.</p>
+      <ul class="c-info">
+        <li>
+          <span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <span><small>Email</small><a href="mailto:sales@startorthoboost.com">sales@startorthoboost.com</a></span>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><small>Office</small>1379 E Canyon Creek Dr<br>Gilbert, AZ 85295</span>
+        </li>
+      </ul>
+      <div class="host-card rv">
+        <img src="/assets/tyler-coles-headshot-800.webp?v=2" alt="Dr. Tyler Coles, founder of OrthoBoost">
+        <div>
+          <div class="h-kick">Built by an orthodontist</div>
+          <div class="h-name">Dr. Tyler Coles</div>
+          <p>Founder of OrthoBoost and a practicing orthodontist for 13 years — he grew his own practice from 2 to 7 locations into Arizona's largest private orthodontic group.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="form-col rv rv-d1">
+      <div class="form-card">
+        <div class="form-card-head">
+          <span class="t">Send us a message</span>
+          <span class="rep">Replies in 1 business day</span>
+        </div>
+        <div class="form-card-body">
+          <form id="contactForm" novalidate>
+            <div class="f-row">
+              <div class="f-field">
+                <label for="cf-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="cf-name" name="full_name" autocomplete="name" required>
+              </div>
+              <div class="f-field">
+                <label for="cf-phone">Phone <span class="req">*</span></label>
+                <input type="tel" id="cf-phone" name="phone" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="f-field">
+              <label for="cf-email">Email <span class="req">*</span></label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="f-row">
+              <div class="f-field">
+                <label for="cf-title">Title</label>
+                <input type="text" id="cf-title" name="title" placeholder="e.g. Orthodontist, Office Manager" autocomplete="organization-title">
+              </div>
+              <div class="f-field">
+                <label for="cf-website">Website <span class="req">*</span></label>
+                <input type="text" id="cf-website" name="website" placeholder="yourpractice.com" autocomplete="url" required>
+              </div>
+            </div>
+            <div class="f-field">
+              <label for="cf-message">What's your biggest marketing challenge right now? <span class="req">*</span></label>
+              <textarea id="cf-message" name="message" required></textarea>
+            </div>
+
+            <div class="consents">
+              <label class="consent">
+                <input type="checkbox" id="cf-sms" name="sms_consent">
+                <span>By checking this box, I consent to receive non-marketing text messages from OrthoBoost about appointment confirmations, reminders, relevant follow-up messages &amp; account notifications. Message frequency varies, message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
+              </label>
+              <label class="consent">
+                <input type="checkbox" id="cf-mktg-sms" name="marketing_sms_consent">
+                <span>By checking this box, I consent to receive marketing and promotional messages including special offers, discounts, new product updates among others from OrthoBoost at the phone number provided. Frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
+              </label>
+            </div>
+
+            <p class="form-legal">By submitting this form you agree to our <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms of Service</a>.</p>
+
+            <!-- Hidden tracking fields (populated client-side from URL params) -->
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_content" value="">
+            <input type="hidden" name="gclid" value="">
+            <input type="hidden" name="fbclid" value="">
+            <input type="hidden" name="wbraid" value="">
+            <input type="hidden" name="gbraid" value="">
+
+            <!-- Honeypot -->
+            <div class="hp-wrap" aria-hidden="true">
+              <label for="cf-company-fax">Company fax</label>
+              <input type="text" id="cf-company-fax" name="company_fax" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn-cyan" id="cf-submit">
+              Send Message
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <div class="form-msg error" id="cf-error" role="alert">
+              Something went wrong sending your message. Please try again, or email us directly at <a href="mailto:sales@startorthoboost.com" style="font-weight:800;text-decoration:underline">sales@startorthoboost.com</a>.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="on-dark">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-col f-brand">
+        <a href="/" class="wordmark"><img src="/assets/logo-white.svg" alt="OrthoBoost" class="logo-img logo-img-footer"></a>
+        <p>The full growth system for orthodontists — ads, websites, SEO, and AI search visibility under one roof.</p>
+      </div>
+      <div class="f-col">
+        <h4>Company</h4>
+        <a href="/services">Services</a>
+        <a href="/#how">How It Works</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/about">About</a>
+      </div>
+      <div class="f-col">
+        <h4>Resources</h4>
+        <a href="/guides">Free Resources</a>
+        <a href="/guides">Guides</a>
+        <a href="/webinars">Webinars</a>
+        <a href="/blog">Blog</a>
+        <a href="/schedule">Book a Strategy Call</a>
+      </div>
+      <div class="f-col">
+        <h4>Expertise</h4>
+        <a href="/seo-for-orthodontists">SEO for Orthodontists</a>
+        <a href="/orthodontic-website-design">Orthodontic Website Design</a>
+        <a href="/google-ads-for-orthodontists">Google Ads for Orthodontists</a>
+        <a href="/social-media-marketing-for-orthodontists">Social Media Marketing</a>
+      </div>
+      <div class="f-col">
+        <h4>Contact</h4>
+        <a href="/contact">Contact Us</a>
+        <p>1379 E Canyon Creek Dr<br>Gilbert, AZ 85295</p>
+        <a href="mailto:sales@startorthoboost.com">sales@startorthoboost.com</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>&copy; 2026 ORTHO BOOST LLC. All rights reserved.</span>
+      <span><a href="/privacy-policy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms-and-conditions">Terms of Service</a> &nbsp;·&nbsp; <a href="/privacy-policy#cookies" class="cc-open">Your Privacy Choices</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Mobile menu */
+  var burger = document.getElementById('burger');
+  var nav = document.getElementById('siteNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('mobile-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('.mobile-menu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('mobile-open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* Scroll reveal */
+  var reveals = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -48px 0px' });
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+<!-- Contact form: tracking params + GHL webhook submit -->
+<script>
+(function(){
+  "use strict";
+  var WEBHOOK = "https://services.leadconnectorhq.com/hooks/CGPdeAZfkGjqdbSiwlqq/webhook-trigger/6iJVUH38j9OpSJy0DXZs";
+  var PARAMS = ["utm_source","utm_medium","utm_campaign","utm_content","gclid","fbclid","wbraid","gbraid"];
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+
+  /* Populate hidden tracking fields from URL params (client-side only — cache-safe) */
+  var qs = new URLSearchParams(window.location.search);
+  PARAMS.forEach(function(p){
+    var v = qs.get(p);
+    if (!v) return;
+    var el = form.querySelector('input[name="' + p + '"]');
+    if (el) el.value = v;
+  });
+
+  var btn = document.getElementById('cf-submit');
+  var errBox = document.getElementById('cf-error');
+
+  function val(name){
+    var el = form.querySelector('[name="' + name + '"]');
+    return el ? el.value.trim() : "";
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errBox.classList.remove('show');
+
+    /* Honeypot: silently pretend success */
+    if (val('company_fax') !== "") { window.location.href = "/contact-confirmed"; return; }
+
+    /* Validation */
+    var ok = true;
+    [['full_name', function(v){ return v.length > 1; }],
+     ['phone', function(v){ return v.replace(/\D/g,'').length >= 10; }],
+     ['email', function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); }],
+     ['website', function(v){ return /.+\..+/.test(v); }],
+     ['message', function(v){ return v.length > 1; }]
+    ].forEach(function(rule){
+      var el = form.querySelector('[name="' + rule[0] + '"]');
+      var good = rule[1](el.value.trim());
+      el.classList.toggle('err', !good);
+      if (!good) { if (ok) el.focus(); ok = false; }
+    });
+    if (!ok) return;
+
+    var payload = {
+      "Full Name": val('full_name'),
+      "Phone": val('phone'),
+      "Email": val('email'),
+      "Title": val('title'),
+      "Website": val('website'),
+      "Message": val('message'),
+      "SMS Consent": document.getElementById('cf-sms').checked ? "Yes" : "No",
+      "Marketing SMS Consent": document.getElementById('cf-mktg-sms').checked ? "Yes" : "No",
+      "form_name": "orthoboost-site-contact",
+      "page_url": window.location.href.split('?')[0]
+    };
+    PARAMS.forEach(function(p){ payload[p] = val(p); });
+
+    btn.disabled = true;
+    fetch(WEBHOOK, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      window.location.href = "/contact-confirmed";
+    }).catch(function(){
+      btn.disabled = false;
+      errBox.classList.add('show');
+    });
+  });
+})();
+</script>
+
+<!-- Cookie consent (Google Consent Mode v2) -->
+<style>
+#cc-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:400;max-width:660px;margin:0 auto;background:#142F56;color:#fff;border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:20px 22px;box-shadow:0 24px 60px -22px rgba(0,0,0,.6);font-family:'Inter',system-ui,sans-serif}
+#cc-banner .cc-body{display:flex;gap:14px 22px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+#cc-banner p{margin:0;font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.82);flex:1 1 330px}
+#cc-banner p strong{color:#fff}
+#cc-banner a{color:#29BBF6;font-weight:600}
+#cc-banner .cc-actions{display:flex;gap:10px;align-items:center;flex:0 0 auto;flex-wrap:wrap}
+#cc-banner button{font-family:inherit;font-weight:800;font-size:13px;border-radius:999px;padding:11px 24px;cursor:pointer;border:0;transition:filter .2s,border-color .2s}
+#cc-banner .cc-accept{background:#29BBF6;color:#142F56}
+#cc-banner .cc-accept:hover{filter:brightness(1.07)}
+#cc-banner .cc-reject{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+#cc-banner .cc-reject:hover{border-color:#fff}
+#cc-banner button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media(max-width:560px){#cc-banner .cc-actions{width:100%}#cc-banner button{flex:1}}
+</style>
+<div id="cc-banner" role="dialog" aria-modal="false" aria-label="Cookie consent" hidden>
+<div class="cc-body">
+<p><strong>We value your privacy.</strong> We use cookies for analytics and advertising to measure and improve our marketing. Nothing non-essential runs until you choose. See our <a href="/privacy-policy#cookies">Privacy Policy</a>.</p>
+<div class="cc-actions">
+<button type="button" class="cc-reject" id="cc-reject">Decline</button>
+<button type="button" class="cc-accept" id="cc-accept">Accept</button>
+</div>
+</div>
+</div>
+<script>
+(function(){
+var KEY='ob_consent_v2',W=window,D=document;W.dataLayer=W.dataLayer||[];
+function gtag(){W.dataLayer.push(arguments);}
+var GTM='GTM-PH9WP2ZC',loaded=false;
+function loadGTM(){if(loaded)return;loaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM);}
+function grant(){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}
+function store(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+function read(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+var banner=D.getElementById('cc-banner');
+function show(){if(banner)banner.hidden=false;}
+function hide(){if(banner)banner.hidden=true;}
+function accept(){store('granted');grant();loadGTM();hide();}
+function decline(){var was=loaded;store('denied');hide();if(was)W.location.reload();}
+var prior=read();
+if(prior==='granted'){grant();loadGTM();}else if(prior!=='denied'){show();}
+var A=D.getElementById('cc-accept'),R=D.getElementById('cc-reject');
+if(A)A.addEventListener('click',accept);
+if(R)R.addEventListener('click',decline);
+D.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.cc-open');if(t){e.preventDefault();show();}});
+})();
+</script>
+<!-- End cookie consent -->
+
+</body>
+</html>
