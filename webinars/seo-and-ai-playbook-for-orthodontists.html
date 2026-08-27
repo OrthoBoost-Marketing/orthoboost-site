@@ -579,10 +579,17 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
 @media(max-width:768px){.cards{grid-template-columns:1fr}.pager a{max-width:none}}
 </style>
 <style>
+/* Replay page: hero and content share ONE column so their left edges align.
+   The template caps .hero-lite h1 at 20ch, which wrapped this long title to 5
+   lines and left the right half of the page empty. */
+.replay-col{max-width:1000px}
+.hero-lite h1{max-width:none}
+.hero-lite p.sub{max-width:64ch}
+@media(max-width:1060px){.replay-col{max-width:900px}}
 .vid-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--off);border:1px solid var(--ink-16);border-radius:var(--r-md);padding:20px 24px;margin:-8px 0 8px}
 .vid-cta p{margin:0;font-size:15px;font-weight:600;color:var(--navy);max-width:52ch}
 .vid-cta p span{color:var(--ink-60);font-weight:500}
-.takeaways{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0 8px}
+.art ul.takeaways{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0 8px;padding-left:0;list-style:none}
 .takeaways li{list-style:none;background:var(--white);border:1px solid var(--ink-16);border-radius:var(--r-md);padding:20px 22px;font-size:15.5px;line-height:1.55;color:rgba(20,47,86,.86)}
 .takeaways li b{display:block;font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan-dark);margin-bottom:8px}
 .faq{border-top:1px solid var(--ink-16);margin-top:8px}
@@ -592,7 +599,7 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
 .faq summary::after{content:"+";font-family:var(--display);color:var(--cyan-dark);font-size:22px;line-height:1;flex:0 0 auto}
 .faq details[open] summary::after{content:"–"}
 .faq details p{margin:0 0 18px;font-size:16px;line-height:1.65;color:rgba(20,47,86,.86);max-width:68ch}
-@media(max-width:700px){.takeaways{grid-template-columns:1fr}.vid-cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:700px){.art ul.takeaways{grid-template-columns:1fr}.vid-cta{flex-direction:column;align-items:flex-start}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Webinars", "item": "https://startorthoboost.com/webinars"}, {"@type": "ListItem", "position": 2, "name": "Orthodontic SEO in 2026: How to Outrank Every Practice in Your City"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "Orthodontic SEO in 2026: How to Outrank Every Practice in Your City", "description": "Dr. Tyler Coles breaks down the SEO and AI search system he used to grow his own orthodontic practice from 2 to 7 locations, and how any practice can build a page for every search patients make in their city.", "thumbnailUrl": "https://img.youtube.com/vi/vCauiO9ujL8/maxresdefault.jpg", "uploadDate": "2026-08-27", "embedUrl": "https://www.youtube.com/embed/vCauiO9ujL8", "contentUrl": "https://www.youtube.com/watch?v=vCauiO9ujL8", "publisher": {"@type": "Organization", "name": "OrthoBoost", "logo": {"@type": "ImageObject", "url": "https://startorthoboost.com/assets/logo-white.svg"}}}</script>
@@ -624,8 +631,8 @@ footer{background:var(--navy);color:var(--white);border-top:1px solid var(--w-16
   </div>
 </header>
 <div class="crumbs"><div class="wrap"><a href="/webinars">Webinars</a> <span aria-hidden="true">›</span> <span>Orthodontic SEO in 2026</span></div></div>
-<section class="hero-lite"><div class="wrap"><p class="kick">Free Webinar · Full Replay</p><h1>Orthodontic SEO in 2026: How to Outrank Every Practice in Your City</h1><p class="sub">Dr. Tyler Coles breaks down the SEO and AI search system he used to grow his own practice from 2 to 7 locations — and how to build a page for every search your patients actually make.</p></div></section>
-<div class="wrap" style="max-width:900px;padding-bottom:96px">
+<section class="hero-lite"><div class="wrap replay-col"><p class="kick">Free Webinar · Full Replay</p><h1>Orthodontic SEO in 2026: How to Outrank Every Practice in Your City</h1><p class="sub">Dr. Tyler Coles breaks down the SEO and AI search system he used to grow his own practice from 2 to 7 locations — and how to build a page for every search your patients actually make.</p></div></section>
+<div class="wrap replay-col" style="padding-bottom:96px">
 <div class="vid"><iframe loading="lazy" src="https://www.youtube.com/embed/vCauiO9ujL8" title="Orthodontic SEO in 2026: How to Outrank Every Practice in Your City" allowfullscreen></iframe></div>
 
 <div class="vid-cta">
