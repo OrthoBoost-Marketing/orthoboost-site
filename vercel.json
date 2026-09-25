@@ -11,6 +11,9 @@
     { "source": "/services/follow-up-for-orthodontists", "destination": "/services", "permanent": true },
     { "source": "/guides/ultimate-follow-up-guide-for-orthodontists", "destination": "/guides", "permanent": true },
     { "source": "/guides/ultimate-treatment-coordinator-guide-for-orthodontists", "destination": "/guides", "permanent": true },
-    { "source": "/how-it-works", "destination": "/", "permanent": true }
+    { "source": "/how-it-works", "destination": "/", "permanent": true },
+    { "source": "/pricing", "destination": "/", "permanent": false },
+    { "source": "/roi-calculator", "destination": "/", "permanent": false },
+    { "source": "/pitch", "destination": "/", "permanent": false }
   ]
 }
